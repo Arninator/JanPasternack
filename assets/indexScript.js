@@ -16,15 +16,16 @@ const Header = (props) => {
         <header>
             <img id="cover-img" src="imgs\janCover.jpg" alt=""/>
             <div id="menu-div">
-                <div id="spd-logo">
-                    <img src="imgs\SPD_Logo_oC_Rot_RGB.png" />
+                <div>
+                    <img  class="spd-logo red" src="imgs\SPD_Logo_oC_Rot_RGB.png" alt="SPD Logo"/>
+                    <img  class="spd-logo black" src="imgs\SPD_Logo_Schwarz_RGB.png" alt="SPD Logo"/>
                 </div>
                 <nav>
                     <ul>
-                        <li>Über</li>
-                        <li>Programm</li>
-                        <li>Bilder</li>
-                        <li>Kontakt</li>
+                        <li>ÜBER</li>
+                        <li>PROGRAMM</li>
+                        <li>BILDER</li>
+                        <li>KONTAKT</li>
                     </ul>
                 </nav>
             </div>
