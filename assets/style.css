@@ -1,0 +1,10 @@
+:root {    
+}
+* {
+    margin: 0px;
+    padding: 0px;
+}
+#cover-img {
+    width: 100vw;
+    /* width: 100%; */
+}
