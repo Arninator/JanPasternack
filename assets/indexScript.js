@@ -5,8 +5,8 @@ class Index extends React.Component {
     render () {
         return(
             <div>
+                <div id="placeholder-top"></div>
                 <Header />
-                <img id="cover-img" src="imgs\janCover.jpg" alt=""/>
                 <Body />
             </div>
             
@@ -16,7 +16,6 @@ class Index extends React.Component {
 const Header = (props) => {
     return(
         <header>
-            
             <div id="menu-div">
                 <div id="menu">
                     <img  class="spd-logo red" src="imgs\SPD_Logo_oC_Rot_RGB.png" alt="SPD Logo" />
@@ -37,7 +36,12 @@ const Header = (props) => {
 const Body = (props) => {
     return(
         <div>
-            
+            <img id="cover-img" src="imgs\janCover.jpg" alt=""/>
+            <div id="hello" class="classic">
+                <h1>MOIN</h1>
+                <p>Das bin ich blabla, hier koennte ihre werbung stehen</p>
+            </div>
+            <div>
 
     Lorem Ipsum
         Font Generator
@@ -265,8 +269,7 @@ Sitemap
 
 Share the Lorem
 
-Wasai
-
+Wasai</div>
         </div>
     )
 }
