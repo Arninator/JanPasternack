@@ -172,7 +172,7 @@ ul {
     font-size: 3vh;
     /* font-variant: small-caps; */
     text-transform: capitalize;
-    /* text-shadow: 1px 1px red; */
+    /* text-shadow: 1px 1px 3px rgba(227, 0, 15, 0.5); */
 
     margin-left: 2vw;
 }
@@ -203,7 +203,7 @@ body {
     position: relative;
     top: -35vh;
 
-    padding: 3vh 20vw;
+    padding: 3vh 15vw;
     /* border: 5px solid red; */
 }
 .classic {
@@ -216,10 +216,13 @@ body {
     box-shadow: 2px 2px 5px darkgray;
 
     padding: 5vh;
+
+    /* max-height: 50vh; */
 }
 .inside-img {
     height: 50vh;
+    margin: 2vw;
 }
 #hello {
-    /* margin: 1vh 10vw; */
+    
 }
