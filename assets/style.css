@@ -109,12 +109,12 @@
     padding: 0px;
 
     /* border: 1px solid black; */
-    border-radius: 1px;
+    border-radius: 2px;
 
     font-family: 'SPD TheSans Versal', monospace;
 
     list-style: none;
-
+    transition: ease 0.5s;
 }
 #placeholder-top {
     height: 8vh;
@@ -122,9 +122,9 @@
 header {
     position: sticky;
     position: -webkit-sticky;
-    top: 1vh;
+    top: 0;
 
-    z-index: 1;
+    z-index: 10;
 }
 #menu-div {
     display: flex;
@@ -167,7 +167,8 @@ ul {
     width: 30vw;
 
     font-weight: 700;
-    color: var(--spd-red);
+    /* color: var(--spd-red); */
+    color: black;
     font-size: 3vh;
     /* font-variant: small-caps; */
     text-transform: capitalize;
@@ -176,23 +177,46 @@ ul {
     margin-left: 2vw;
 }
 li {
-    border-left: 1px solid var(--spd-red);
+    /* border-left: 1px solid var(--spd-red); */
 }
 li:hover {
     color: black;
     cursor: pointer;
 }
-#cover-img {
-    position:absolute;
-    width: 100%;
-    top: 0;
-}
 body {
+    position:absolute;
     background-color: lightgray;
 }
-#hello {
-    background-color: white;
-    box-shadow: 1px 1px grey;
+#cover-img {
+    position: relative;
+    top: -18vh;
 
-    z-index: 9;
+    width: 100%;
+}
+.fade-in {
+    opacity: 0;
+}
+.background {
+    width: 100%;
+    background-color: lightgray;
+}
+.classic {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: white;
+    box-shadow: 2px 2px 5px darkgray;
+
+    padding: 5vh;
+}
+.inside-img {
+    height: 50vh;
+}
+#hello {
+    position: relative;
+    top: -35vh;
+
+    margin: 1vh 10vw;
 }

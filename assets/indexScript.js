@@ -1,6 +1,45 @@
 class Index extends React.Component {
     constructor (props) {
         super(props);
+
+    }
+    componentDidMount () {
+        $(document).ready(function() {
+            $(window).scroll(function() {
+
+                /* sticky menu */
+                $("#menu-div").each(function() {
+                    var menu_top = $(this).offset().top;
+                    var window_top = $(window).scrollTop();
+
+                    if (menu_top - window_top <= ($(window).height()) / 100.) {
+                        $(this).css("background-color", "rgb(227, 0, 15)");
+                        // $(this).css("transition", "ease 0.5s");
+                        $("li").css("color", "white");
+                    } else {
+                        $(this).css("background-color", "transparent");
+                        $("li").css("color", "black");
+                    }
+                })
+                /* position of fade in and out objects */
+                $('.fade-in').each(function(index){
+                    
+                    var object_top = $(this).offset().top;
+                    var object_bottom = $(this).offset().top + $(this).outerHeight();
+                    var window_top = $(window).scrollTop();
+                    var window_bottom = $(window).scrollTop() + $(window).height();
+                    
+                    /* if its half seen, fade it in */
+                    if (object_top + ($(this).outerHeight() / 2.) < window_bottom){
+                        $(this).css("opacity", "1");
+                    } else {
+                        $(this).css("opacity", "0");
+                    }
+                }); 
+            
+            });
+            
+        });
     }
     render () {
         return(
@@ -37,9 +76,16 @@ const Body = (props) => {
     return(
         <div>
             <img id="cover-img" src="imgs\janCover.jpg" alt=""/>
-            <div id="hello" class="classic">
-                <h1>MOIN</h1>
-                <p>Das bin ich blabla, hier koennte ihre werbung stehen</p>
+            <div class="background fade-in">
+                <div id="hello" class="classic">
+                    <img id="vorstellungs-img" class="inside-img" src="imgs\jan sitzt.jpg" alt=""/>
+                    <div>
+                        <h1>MOIN</h1>
+                        <p>Non quam lacus suspendisse faucibus interdum posuere lorem ipsum dolor. Ultrices eros in cursus turpis massa tincidunt dui. Donec enim diam vulputate ut pharetra sit. Malesuada fames ac turpis egestas maecenas pharetra convallis posuere morbi. Justo donec enim diam vulputate ut pharetra sit amet. Adipiscing diam donec adipiscing tristique risus nec feugiat in. Enim nunc faucibus a pellentesque sit amet porttitor eget dolor. Lacinia quis vel eros donec. Faucibus et molestie ac feugiat sed lectus vestibulum mattis ullamcorper. Lorem mollis aliquam ut porttitor leo a. Faucibus nisl tincidunt eget nullam non. Massa tincidunt dui ut ornare. Ullamcorper malesuada proin libero nunc consequat interdum varius sit. Eleifend quam adipiscing vitae proin sagittis nisl rhoncus. Magna ac placerat vestibulum lectus mauris ultrices. Nibh tortor id aliquet lectus proin nibh nisl condimentum id. Dapibus ultrices in iaculis nunc sed augue lacus. Feugiat vivamus at augue eget arcu dictum varius duis at.
+    In ornare quam viverra orci sagittis. Egestas dui id ornare arcu odio. Amet volutpat consequat mauris nunc congue nisi vitae. Mauris commodo quis imperdiet massa tincidunt nunc pulvinar sapien. Amet porttitor eget dolor morbi. Diam sit amet nisl suscipit adipiscing bibendum. Sollicitudin tempor id eu nisl nunc mi. Ornare lectus sit amet est placerat in egestas erat imperdiet. Interdum posuere lorem ipsum dolor sit. Eu volutpat odio facilisis mauris sit. Malesuada nunc vel risus commodo. Vulputate sapien nec sagittis aliquam malesuada bibendum. Egestas sed tempus urna et pharetra pharetra massa. Phasellus vestibulum lorem sed risus ultricies tristique nulla aliquet. Cursus metus aliquam eleifend mi in nulla posuere sollicitudin. Ac placerat vestibulum lectus mauris ultrices eros in. Tincidunt nunc pulvinar sapien et ligula ullamcorper. Ornare aenean euismod elementum nisi quis eleifend quam adipiscing vitae. Adipiscing enim eu turpis egestas pretium aenean.
+    Sit amet consectetur adipiscing elit pellentesque habitant morbi tristique senectus. Sit amet commodo nulla facilisi. Id diam maecenas ultricies mi. Malesuada fames ac turpis egestas sed tempus. Consectetur adipiscing elit pellentesque habitant morbi tristique. Odio ut enim blandit volutpat maecenas volutpat. Fermentum et sollicitudin ac orci phasellus. Feugiat vivamus at augue eget arcu dictum varius duis at. Magna sit amet purus gravida quis blandit turpis cursus. Placerat vestibulum lectus mauris ultrices eros. Amet purus gravida quis blandit turpis cursus in hac. Facilisis mauris sit amet massa vitae tortor condimentum lacinia. Auctor neque vitae tempus quam pellentesque nec nam. Nunc consequat interdum varius sit amet mattis. Urna cursus eget nunc scelerisque viverra. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id.</p>
+                    </div>
+                </div>
             </div>
             <div>
 
