@@ -108,29 +108,31 @@
     margin: 0px;
     padding: 0px;
 
+    border-radius: 1px;
+
     font-family: 'SPD TheSans Versal', monospace;
 
     list-style: none;
 
     /* border: 1px solid black; */
 }
-#menu-div {
+#placeholder-top {
+    height: 8vh;
+}
+header {
     position: sticky;
     position: -webkit-sticky;
     top: 1vh;
 
+    z-index: 1;
+}
+#menu-div {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     
     width: 100%;
-
-    z-index: 10;
-
-    /* padding: 8vh 0vw 0vh 0vw; */
-
-    /* background-color: rgba(211, 211, 211, 0.25); */
 }
 .spd-logo {
     height: 5vh;
@@ -138,10 +140,6 @@
 
     background-color: #fbfbfb2a;
     background-color: var(--spd-red);
-    border-radius: 1px;
-
-    position: relative;
-    top: 8vh;
 }
 .red {
     display: none;
@@ -161,10 +159,6 @@ nav {
     /* background-color: #fbfbfb2a; */
     /* background-color: var(--spd-red); */
     /* border: 1px solid var(--spd-red); */
-    border-radius: 1px;
-
-    position: relative;
-    top: 8vh;
 }
 ul {
     display: inherit;
@@ -172,23 +166,23 @@ ul {
 
     width: 30vw;
 
-    font-weight: 100;
+    font-weight: 700;
     color: var(--spd-red);
     font-size: 3vh;
     /* font-variant: small-caps; */
     text-transform: capitalize;
-    text-shadow: 1px 1px red;
+    /* text-shadow: 1px 1px red; */
 
     margin-left: 2vw;
 }
+li {
+    border-left: 1px solid var(--spd-red);
+}
 li:hover {
     color: black;
-    text-shadow: 1px 1px red;
-
     cursor: pointer;
 }
 #cover-img {
-    /* width: 100vw; */
     position:absolute;
     width: 100%;
     top: 0;
