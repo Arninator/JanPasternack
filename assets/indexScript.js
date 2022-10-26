@@ -6,6 +6,7 @@ class Index extends React.Component {
         return(
             <div>
                 <Header />
+                <img id="cover-img" src="imgs\janCover.jpg" alt=""/>
                 <Body />
             </div>
             
@@ -15,18 +16,18 @@ class Index extends React.Component {
 const Header = (props) => {
     return(
         <header>
-            <img id="cover-img" src="imgs\janCover.jpg" alt=""/>
+            
             <div id="menu-div">
-                <div>
+                <div id="menu">
                     <img  class="spd-logo red" src="imgs\SPD_Logo_oC_Rot_RGB.png" alt="SPD Logo" />
-                    <img  class="spd-logo black" src="imgs\SPD_Logo_Schwarz_RGB.png" alt="SPD Logo" />
+                    <img  class="spd-logo black" src="imgs\SPD_Logo_Weiss.png" alt="SPD Logo" />
                 </div>
                 <nav>
                     <ul>
-                        <li>ÜBER</li>
-                        <li>PROGRAMM</li>
-                        <li>BILDER</li>
-                        <li>KONTAKT</li>
+                        <li>Über</li>
+                        <li>Programm</li>
+                        <li>Bilder</li>
+                        <li>Kontakt</li>
                     </ul>
                 </nav>
             </div>

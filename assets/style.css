@@ -47,50 +47,53 @@
     src: local('font/SPD_TheSans_TT8_.ttf') format("truetype");
     font-display: swap;
 }
+
+/* VERSAL */
+
 @font-face {
-    font-family: 'SPD TheSans V';
+    font-family: 'SPD TheSans Versal';
     font-style: normal;
     font-weight: 300;
-    src: local('font/SPD_TheSans_V_TT3_.ttf') format("truetype");
+    src: local('font\SPD_TheSans_V_TT3_.ttf') format("truetype");
     font-display: swap;
 }
 @font-face {
-    font-family: 'SPD TheSans V';
+    font-family: 'SPD TheSans Versal';
     font-style: italic;
     font-weight: 300;
-    src: local('font/SPD_TheSans_V_TT3i.ttf') format("truetype");
+    src: local('font\SPD_TheSans_V_TT3i.ttf') format("truetype");
     font-display: swap;
 }
 @font-face {
-    font-family: 'SPD TheSans V';
+    font-family: 'SPD TheSans Versal';
     font-style: normal;
     font-weight: 500;
-    src: local('font/SPD_TheSans_V_TT5_.ttf') format("truetype");
+    src: local('font\SPD_TheSans_V_TT5_.ttf') format("truetype");
     font-display: swap;
 }
 @font-face {
-    font-family: 'SPD TheSans V';
+    font-family: 'SPD TheSans Versal';
     font-style: italic;
     font-weight: 500;
-    src: local('font/SPD_TheSans_V_TT5i.ttf') format("truetype");
+    src: local('font\SPD_TheSans_V_TT5i.ttf') format("truetype");
     font-display: swap;
 }
 @font-face {
-    font-family: 'SPD TheSans V';
+    font-family: 'SPD TheSans Versal';
     font-style: normal;
     font-weight: 700;
     src: local('font/SPD_TheSans_V_TT7_.ttf') format("truetype");
     font-display: swap;
 }
 @font-face {
-    font-family: 'SPD TheSans V';
+    font-family: 'SPD TheSans Versal';
     font-style: italic;
     font-weight: 700;
     src: local('font/SPD_TheSans_V_TT7i.ttf') format("truetype");
     font-display: swap;
 }
 @font-face {
-    font-family: 'SPD TheSans V';
+    font-family: 'SPD TheSans Versal';
     font-style: normal;
     font-weight: 800;
     src: local('font/SPD_TheSans_V_TT8_.ttf') format("truetype");
@@ -98,18 +101,23 @@
 }
 :root {
     --spd-red: rgb(227, 0, 15);
+
+    --cover-img: local('imgs\janCover.jpg');
 }
 * {
     margin: 0px;
     padding: 0px;
 
-    font-family: 'SPD TheSans', monospace;
+    font-family: 'SPD TheSans Versal', monospace;
 
     list-style: none;
+
+    /* border: 1px solid black; */
 }
 #menu-div {
-    position: fixed;
-    top: 0;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 1vh;
 
     display: flex;
     flex-direction: row;
@@ -117,7 +125,10 @@
     align-items: center;
     
     width: 100%;
-    padding: 8vh 0vw 0vh 0vw;
+
+    z-index: 10;
+
+    /* padding: 8vh 0vw 0vh 0vw; */
 
     /* background-color: rgba(211, 211, 211, 0.25); */
 }
@@ -126,8 +137,11 @@
     padding: 2vh 1vw 2vh 2vw;
 
     background-color: #fbfbfb2a;
-    /* background-color: var(--spd-red); */
+    background-color: var(--spd-red);
     border-radius: 1px;
+
+    position: relative;
+    top: 8vh;
 }
 .red {
     display: none;
@@ -142,11 +156,15 @@ nav {
     align-items: center;
 
     padding: 1vh 2vw 1vh 1vw;
+    height: 100%;
 
-    background-color: #fbfbfb2a;
+    /* background-color: #fbfbfb2a; */
     /* background-color: var(--spd-red); */
     /* border: 1px solid var(--spd-red); */
     border-radius: 1px;
+
+    position: relative;
+    top: 8vh;
 }
 ul {
     display: inherit;
@@ -155,17 +173,23 @@ ul {
     width: 30vw;
 
     font-weight: 100;
-    color: rgba(0, 0, 0, 0.75);
+    color: var(--spd-red);
     font-size: 3vh;
+    /* font-variant: small-caps; */
+    text-transform: capitalize;
+    text-shadow: 1px 1px red;
 
     margin-left: 2vw;
 }
 li:hover {
-    color: var(--spd-red);
+    color: black;
+    text-shadow: 1px 1px red;
+
     cursor: pointer;
-    font-style: italic;
 }
 #cover-img {
     /* width: 100vw; */
+    position:absolute;
     width: 100%;
+    top: 0;
 }
