@@ -197,8 +197,14 @@ body {
     opacity: 0;
 }
 .background {
-    width: 100%;
+    max-width: 100%;
     background-color: lightgray;
+
+    position: relative;
+    top: -35vh;
+
+    padding: 3vh 20vw;
+    /* border: 5px solid red; */
 }
 .classic {
     display: flex;
@@ -215,8 +221,5 @@ body {
     height: 50vh;
 }
 #hello {
-    position: relative;
-    top: -35vh;
-
-    margin: 1vh 10vw;
+    /* margin: 1vh 10vw; */
 }

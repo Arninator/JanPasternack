@@ -30,7 +30,7 @@ class Index extends React.Component {
                     var window_bottom = $(window).scrollTop() + $(window).height();
                     
                     /* if its half seen, fade it in */
-                    if (object_top + ($(this).outerHeight() / 2.) < window_bottom){
+                    if (window_bottom - object_top > ($(this).outerHeight() / 2.)){
                         $(this).css("opacity", "1");
                     } else {
                         $(this).css("opacity", "0");
