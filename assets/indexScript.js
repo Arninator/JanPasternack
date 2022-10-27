@@ -40,6 +40,21 @@ class Index extends React.Component {
             });
             
         });
+
+        console.log($('#myFrame').contents());
+
+        // $.get('https://www.googleapis.com/calendar/v3/calendars/sechzehngeteiltdurchneun@gmail.com/events?key=AIzaSyBzffRfe_ei76vDrBMJVwmcXdT7yViRSR0',function(data,status) {
+         
+        // var innerData = (data);   
+        // console.log(innerData.length);
+
+        // var filteredData = (innerData.items.filter((item) => {
+        //         return item.created.contains("2022")
+        //     }))
+        //     console.log(filteredData)
+        // },'html');
+        // // console.log(eventList);
+
     }
     render () {
         return(
@@ -86,7 +101,6 @@ const Body = (props) => {
                     </div>
                 </div>
             </div>
-            {/* <a className="twitter-timeline" href="https://twitter.com/jan_pasternack?ref_src=twsrc%5Etfw" data-width="300" data-height="300">Tweets by @jan_pasternack</a> */}
             <div>
 
     Lorem Ipsum
