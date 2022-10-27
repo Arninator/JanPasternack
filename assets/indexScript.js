@@ -86,7 +86,7 @@ const Body = (props) => {
                     </div>
                 </div>
             </div>
-            <a class="twitter-timeline" href="https://twitter.com/jan_pasternack?ref_src=twsrc%5Etfw" height="300px" width="300px">Tweets by @jan_pasternack</a>
+            <a class="twitter-timeline" href="https://twitter.com/jan_pasternack?ref_src=twsrc%5Etfw" data-width="300" data-height="300">Tweets by @jan_pasternack</a>
             <div>
 
     Lorem Ipsum
