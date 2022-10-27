@@ -57,8 +57,8 @@ const Header = (props) => {
         <header>
             <div id="menu-div">
                 <div id="menu">
-                    <img  class="spd-logo red" src="imgs\SPD_Logo_oC_Rot_RGB.png" alt="SPD Logo" />
-                    <img  class="spd-logo black" src="imgs\SPD_Logo_Weiss.png" alt="SPD Logo" />
+                    <img  className="spd-logo red" src="imgs\SPD_Logo_oC_Rot_RGB.png" alt="SPD Logo" />
+                    <img  className="spd-logo black" src="imgs\SPD_Logo_Weiss.png" alt="SPD Logo" />
                 </div>
                 <nav>
                     <ul>
@@ -76,9 +76,9 @@ const Body = (props) => {
     return(
         <div>
             <img id="cover-img" src="imgs\janCover.jpg" alt=""/>
-            <div class="background fade-in">
-                <div id="hello" class="classic">
-                    <img id="vorstellungs-img" class="inside-img" src="imgs\jan sitzt.jpg" alt=""/>
+            <div className="background fade-in">
+                <div id="hello" className="classic">
+                    <img id="vorstellungs-img" className="inside-img" src="imgs\jan sitzt.jpg" alt=""/>
                     <div>
                         <h1>MOIN</h1>
                         <p>Non quam lacus suspendisse faucibus interdum posuere lorem ipsum dolor. Ultrices eros in cursus turpis massa tincidunt dui. Donec enim diam vulputate ut pharetra sit. Malesuada fames ac turpis egestas maecenas pharetra convallis posuere morbi. Justo donec enim diam vulputate ut pharetra sit amet. Adipiscing diam donec adipiscing tristique risus nec feugiat in. Enim nunc faucibus a pellentesque sit amet porttitor eget dolor. Lacinia quis vel eros donec. Faucibus et molestie ac feugiat sed lectus vestibulum mattis ullamcorper. Lorem mollis aliquam ut porttitor leo a. Faucibus nisl tincidunt eget nullam non. Massa tincidunt dui ut ornare. Ullamcorper malesuada proin libero nunc consequat interdum varius sit. Eleifend quam adipiscing vitae proin sagittis nisl rhoncus. Magna ac placerat vestibulum lectus mauris ultrices. Nibh tortor id aliquet lectus proin nibh nisl condimentum id. Dapibus ultrices in iaculis nunc sed augue lacus. Feugiat vivamus at augue eget arcu dictum varius duis at.
@@ -86,7 +86,7 @@ const Body = (props) => {
                     </div>
                 </div>
             </div>
-            <a class="twitter-timeline" href="https://twitter.com/jan_pasternack?ref_src=twsrc%5Etfw" data-width="300" data-height="300">Tweets by @jan_pasternack</a>
+            {/* <a className="twitter-timeline" href="https://twitter.com/jan_pasternack?ref_src=twsrc%5Etfw" data-width="300" data-height="300">Tweets by @jan_pasternack</a> */}
             <div>
 
     Lorem Ipsum
