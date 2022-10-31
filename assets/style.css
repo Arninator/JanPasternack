@@ -109,7 +109,7 @@
     padding: 0px;
 
     /* border: 1px solid black; */
-    border-radius: 2px;
+    border-radius: 3px;
 
     font-family: 'SPD TheSans Versal', monospace;
 
@@ -185,7 +185,7 @@ li:hover {
 }
 body {
     position:absolute;
-    background-color: lightgray;
+    background-color: rgb(233, 233, 233);
 }
 #cover-img {
     position: relative;
@@ -198,13 +198,12 @@ body {
 }
 .background {
     max-width: 100%;
-    background-color: lightgray;
+    background-color: rgb(233, 233, 233);
 
     position: relative;
     top: -35vh;
 
-    padding: 3vh 15vw;
-    /* border: 5px solid red; */
+    padding: 3vh 10vw;
 }
 .classic {
     display: flex;
@@ -225,4 +224,57 @@ body {
 }
 #hello {
     
+}
+.two {
+    display: grid;
+    gap: 5vw;
+}
+#twitter-div {
+    width: 20vw;
+    /* position: relative;
+    top: -35vh; */
+
+    background-color: white;
+    box-shadow: 2px 2px 5px darkgray;
+
+    padding: 5vh;
+    /* margin: 0 10vw; */
+
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+.twitter-timeline {
+    border: none;
+}
+#second {
+    grid-column-start: 2;
+    grid-column-end: 4;
+
+    /* position: relative;
+    top: -35vh; */
+    width: 45vw;
+}
+.three {
+    display: grid;
+    gap: 5vw;
+
+    /* position: relative;
+    top: -35vh; */
+}
+#diesdas {
+    /* position: relative;
+    top: -35vh; */
+
+    width: 45vw;
+
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+#neben-diesdas {
+    /* position: relative;
+    top: -35vh; */
+    width: 20vw;
+
+    grid-column-start: 3;
+    grid-column-end: 5;
 }
