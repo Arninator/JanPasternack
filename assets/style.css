@@ -172,7 +172,8 @@ nav {
     text-transform: capitalize;
 
     background-color: transparent;
-    color: var(--spd-red);
+    color: black;
+    border-right: 1px solid var(--spd-red);
     /* text-shadow: 1px 1px 3px rgba(227, 0, 15, 0.5); */
 
     margin-left: 2vw;

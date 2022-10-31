@@ -56,7 +56,8 @@ class Index extends React.Component {
             url:      "https://www.googleapis.com/calendar/v3/calendars/sechzehngeteiltdurchneun@gmail.com/events?key=AIzaSyBzffRfe_ei76vDrBMJVwmcXdT7yViRSR0",
             dataType: "jsonp",
             success: function(data){
-              console.log("DATA: " + JSON.stringify(Object.keys(data.items["249"])));
+                console.log("DATA: " + (Object.keys(data.items[data.items.length - 1])));
+                console.log(data.items[data.items.length - 1].htmlLink);
             }
         });
 
