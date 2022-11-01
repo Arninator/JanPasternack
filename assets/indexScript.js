@@ -53,35 +53,15 @@ class Index extends React.Component {
         //GOOGELCALENDAR ABFRAGE
         $.ajax({
             type:     "GET",
+            // headers: {'Access-Control-Allow-Origin': '*' },
             url:      "https://www.googleapis.com/calendar/v3/calendars/sechzehngeteiltdurchneun@gmail.com/events?key=AIzaSyBzffRfe_ei76vDrBMJVwmcXdT7yViRSR0",
-            dataType: "jsonp",
+            // dataType: "jsonp",
             success: function(data){
+                console.log(data);
                 console.log("DATA: " + (Object.keys(data.items[data.items.length - 1])));
-                console.log(data.items[data.items.length - 1].htmlLink);
+                for (let i = 0; i < data.items.length; i++) console.log(data.items[i].summary);
             }
         });
-
-        // $.ajax({
-        //     type: 'GET',
-        //     headers: {  'Access-Control-Allow-Origin': '*' },
-        //     crossDomain: true,
-        //     dataType: 'jsonp',
-        //     url: 'https://twitter.com/jan_pasternack?ref_src=twsrc%5Etfw',
-        //     success: function(jsondata){
-        //         console.log("hier" + jsondata);
-        //     }
-        //  })
-        // $.get('https://www.googleapis.com/calendar/v3/calendars/sechzehngeteiltdurchneun@gmail.com/events?key=AIzaSyBzffRfe_ei76vDrBMJVwmcXdT7yViRSR0',function(data,status) {
-         
-        // var innerData = (data);
-        // console.log("DAta: " + innerData);
-
-        // var filteredData = (innerData.items.filter((item) => {
-        //         return item.created.contains("2022")
-        //     }))
-        //     console.log(filteredData)
-        // },'html');
-        // console.log(eventList);
 
     }
     render () {
