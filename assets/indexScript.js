@@ -50,18 +50,21 @@ class Index extends React.Component {
             });
         });
 
+        listUpcomingEvents();
+
         //GOOGELCALENDAR ABFRAGE
-        $.ajax({
-            type:     "GET",
-            // headers: {'Access-Control-Allow-Origin': '*' },
-            url:      "https://www.googleapis.com/calendar/v3/calendars/sechzehngeteiltdurchneun@gmail.com/events?key=AIzaSyBzffRfe_ei76vDrBMJVwmcXdT7yViRSR0",
-            // dataType: "jsonp",
-            success: function(data){
-                console.log(data);
-                console.log("DATA: " + (Object.keys(data.items[data.items.length - 1])));
-                for (let i = 0; i < data.items.length; i++) console.log(data.items[i].summary);
-            }
-        });
+         $.ajax({
+             type:     "GET",
+             contentType: "text/html",
+            url:      "https://www.googleapis.com/calendar/v3/calendars/sechzehngeteiltdurchneun@gmail.com/events?key=AIzaSyD3HySl2mo7m_5cjUwhltGmDt29yJ4U5uU",
+            //url:       "https://calendar.google.com/calendar/u/0?cid=c2VjaHplaG5nZXRlaWx0ZHVyY2huZXVuQGdtYWlsLmNvbQ",
+             dataType:   "jsonp",
+             success: function(data){
+                 console.log(data);
+                 console.log("DATA: " + (Object.keys(data.items[data.items.length - 1])));
+                 for (let i = 0; i < data.items.length; i++) console.log(data.items[i].summary);
+             }
+         });
 
     }
     render () {
@@ -131,6 +134,7 @@ const Body = (props) => {
                     Non quam lacus suspendisse faucibus interdum posuere lorem ipsum dolor. Ultrices eros in cursus turpis massa tincidunt dui. Donec enim diam vulputate ut pharetra sit. Malesuada fames ac turpis egestas maecenas pharetra convallis posuere morbi. Justo donec enim diam vulputate ut pharetra sit amet. Adipiscing diam donec adipiscing tristique risus nec feugiat in. Enim nunc faucibus a pellentesque sit amet porttitor eget dolor. Lacinia quis vel eros donec. Faucibus et molestie ac feugiat sed lectus vestibulum mattis ullamcorper. Lorem mollis aliquam ut porttitor leo a. Faucibus nisl tincidunt eget nullam non. Massa tincidunt dui ut ornare. Ullamcorper malesuada proin libero nunc consequat interdum varius sit. Eleifend quam adipiscing vitae proin sagittis nisl rhoncus. Magna ac placerat vestibulum lectus mauris ultrices. Nibh tortor id aliquet lectus proin nibh nisl condimentum id. Dapibus ultrices in iaculis nunc sed augue lacus. Feugiat vivamus at augue eget arcu dictum varius duis at.
                 </div>
             </div>
+            {/* <iframe id="google-frame" crossOrigin={{'Access-Control-Allow-Origin': '*' }} src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=Europe%2FBerlin&src=c2VjaHplaG5nZXRlaWx0ZHVyY2huZXVuQGdtYWlsLmNvbQ&color=%233F51B5" style={{"borderWidth": 0}} width="800" height="600" frameBorder="0" scrolling="no"></iframe>         */}
         </div>
     )
 }
